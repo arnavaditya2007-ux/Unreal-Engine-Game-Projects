@@ -5,6 +5,7 @@ import HeroSection from './components/HeroSection';
 import ModesSection from './components/ModesSection';
 import WorldSection from './components/WorldSection';
 import GallerySection from './components/GallerySection';
+import PrototypeGallery from './components/PrototypeGallery';
 import ArmorySection from './components/ArmorySection';
 import BossSection from './components/BossSection';
 import EconomySection from './components/EconomySection';
@@ -38,6 +39,7 @@ function App() {
       <ModesSection />
       <WorldSection />
       <GallerySection />
+      <PrototypeGallery />
       <ArmorySection />
       <BossSection />
       <EconomySection />

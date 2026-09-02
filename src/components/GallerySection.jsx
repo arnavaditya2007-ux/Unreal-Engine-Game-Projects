@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 
 function GallerySection() {
   const [selectedImage, setSelectedImage] = useState(null);
-  const images = Array.from({ length: 9 }, (_, i) => `assets/game_map (${i + 4}).png`);
+  const imageNumbers = [4, 5, 6, 9, 10, 12, 7, 11, 8];
+  const images = imageNumbers.map(n => `assets/game_map (${n}).png`);
 
   return (
     <section id="gallery" className="bg-pattern" style={{ background: 'var(--color-bg-dark)' }}>
-      <h2 className="section-title reveal">Game Maps Gallery</h2>
-      <p className="section-subtitle reveal delay-1">Explore the high-resolution environments from the game.</p>
+      <h2 className="section-title reveal">Final In-Game Renders</h2>
+      <p className="section-subtitle reveal delay-1">Experience the fully realized, high-fidelity environments of the finished game.</p>
       
       <div className="gallery-grid">
         {images.map((src, index) => (
