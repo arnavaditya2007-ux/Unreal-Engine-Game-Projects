@@ -138,13 +138,12 @@ function PrototypeGallery() {
           padding: '40px',
           backdropFilter: 'blur(10px)'
         }} onClick={() => setSelectedImage(null)}>
-          <button style={{
+          <div role="button" tabIndex={0} onClick={(e) => { e.stopPropagation(); setSelectedImage(null); }} style={{
             position: 'absolute',
             top: '24px',
             right: '24px',
             width: '40px',
             height: '40px',
-            aspectRatio: '1 / 1',
             background: 'rgba(255, 255, 255, 0.1)',
             border: '1px solid rgba(255, 255, 255, 0.3)',
             borderRadius: '50%',
@@ -152,18 +151,18 @@ function PrototypeGallery() {
             cursor: 'pointer',
             padding: '0',
             margin: '0',
-            overflow: 'hidden',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             transition: 'all 0.2s',
             zIndex: 10000,
             boxSizing: 'border-box',
-            lineHeight: '0'
+            fontSize: '16px',
+            lineHeight: '1'
           }}
           onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255, 0, 85, 0.3)'; e.currentTarget.style.borderColor = '#ff0055'; }}
           onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'; e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)'; }}
-          ><span style={{ fontSize: '16px', lineHeight: '1', display: 'block' }}>✕</span></button>
+          >✕</div>
           <img 
             src={selectedImage} 
             alt="Full screen preview" 
