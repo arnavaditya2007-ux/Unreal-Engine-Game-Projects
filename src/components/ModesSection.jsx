@@ -24,7 +24,7 @@ function ModesSection() {
       </div>
       
       <div style={{ marginTop: '60px', textAlign: 'center' }}>
-         <div style={{ display: 'inline-block', padding: '16px 32px', background: 'rgba(255, 184, 0, 0.1)', borderRadius: '8px' }}>
+         <div style={{ display: 'inline-block', padding: '16px 32px', background: 'var(--color-surface)', border: '1px solid var(--color-glass-border)', borderRadius: '8px' }}>
             <h3 style={{ color: 'var(--color-primary)', marginBottom: '8px' }}>Offline Support Available</h3>
             <p style={{ color: 'var(--color-text-muted)' }}>Play Battle Royale offline against mainly bots. Perfect for training anywhere, anytime.</p>
          </div>

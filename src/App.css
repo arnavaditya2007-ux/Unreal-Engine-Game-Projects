@@ -261,3 +261,68 @@ html {
   box-shadow: 0 0 10px var(--color-primary-glow);
   transition: width 0.2s ease-out;
 }
+
+/* Cinematic Badge Animation */
+.cinematic-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 32px;
+  margin-bottom: 24px;
+  background: linear-gradient(90deg, rgba(255, 184, 0, 0.05) 0%, rgba(255, 184, 0, 0.2) 50%, rgba(255, 184, 0, 0.05) 100%);
+  border-top: 1px solid rgba(255, 184, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 184, 0, 0.2);
+  border-left: 4px solid var(--color-primary);
+  border-right: 4px solid var(--color-primary);
+  color: var(--color-primary);
+  font-family: var(--font-header);
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  animation: badgeBreathe 4s ease-in-out infinite;
+}
+
+.cinematic-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-30deg);
+  animation: badgeSweep 5s infinite;
+}
+
+.cinematic-badge .badge-icon {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-primary);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  box-shadow: 0 0 10px var(--color-primary);
+  animation: iconPulse 2s infinite;
+}
+
+.cinematic-badge .badge-text {
+  text-shadow: 0 0 10px rgba(255, 184, 0, 0.5);
+}
+
+@keyframes badgeBreathe {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 184, 0, 0.1), inset 0 0 15px rgba(255, 184, 0, 0.1); }
+  50% { box-shadow: 0 0 40px rgba(255, 184, 0, 0.3), inset 0 0 25px rgba(255, 184, 0, 0.2); }
+}
+
+@keyframes badgeSweep {
+  0% { left: -100%; }
+  15% { left: 200%; }
+  100% { left: 200%; }
+}
+
+@keyframes iconPulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
