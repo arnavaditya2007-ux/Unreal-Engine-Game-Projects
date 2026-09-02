@@ -58,7 +58,7 @@ function StoreView({ category }) {
           <div className="glass-panel" style={{ padding: '32px', maxWidth: '400px', textAlign: 'center' }}>
             {purchaseModal.success ? (
               <>
-                <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(0,255,136,0.2)', color: '#00ff88', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
+                <div style={{ width: '64px', height: '64px', borderRadius: '8px', background: 'rgba(0,255,136,0.2)', color: '#00ff88', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
                   <Check size={32} />
                 </div>
                 <h2>PURCHASE SUCCESSFUL</h2>
@@ -66,7 +66,7 @@ function StoreView({ category }) {
               </>
             ) : (
               <>
-                <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(255,0,85,0.2)', color: '#ff0055', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
+                <div style={{ width: '64px', height: '64px', borderRadius: '8px', background: 'rgba(255,0,85,0.2)', color: '#ff0055', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
                   <X size={32} />
                 </div>
                 <h2>INSUFFICIENT FUNDS</h2>
