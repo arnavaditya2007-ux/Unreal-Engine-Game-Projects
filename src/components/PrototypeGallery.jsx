@@ -142,10 +142,9 @@ function PrototypeGallery() {
             position: 'absolute',
             top: '24px',
             right: '24px',
-            width: '44px',
-            height: '44px',
-            minWidth: '44px',
-            minHeight: '44px',
+            width: '40px',
+            height: '40px',
+            aspectRatio: '1 / 1',
             background: 'rgba(255, 255, 255, 0.1)',
             border: '1px solid rgba(255, 255, 255, 0.3)',
             borderRadius: '50%',
@@ -153,20 +152,18 @@ function PrototypeGallery() {
             cursor: 'pointer',
             padding: '0',
             margin: '0',
+            overflow: 'hidden',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             transition: 'all 0.2s',
             zIndex: 10000,
-            fontSize: '18px',
-            lineHeight: '1',
-            boxSizing: 'border-box'
+            boxSizing: 'border-box',
+            lineHeight: '0'
           }}
           onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255, 0, 85, 0.3)'; e.currentTarget.style.borderColor = '#ff0055'; }}
           onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'; e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)'; }}
-          >
-            ✕
-          </button>
+          ><span style={{ fontSize: '16px', lineHeight: '1', display: 'block' }}>✕</span></button>
           <img 
             src={selectedImage} 
             alt="Full screen preview" 
