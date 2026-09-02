@@ -139,8 +139,7 @@ function PrototypeGallery() {
           backdropFilter: 'blur(10px)'
         }} onClick={() => setSelectedImage(null)}>
           <svg onClick={(e) => { e.stopPropagation(); setSelectedImage(null); }} width="40" height="40" viewBox="0 0 40 40" style={{ position: 'absolute', top: '24px', right: '24px', cursor: 'pointer', zIndex: 10000, transition: 'transform 0.2s' }} onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.1)'} onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}>
-            <circle cx="20" cy="20" r="19" fill="rgba(255, 255, 255, 0.1)" stroke="rgba(255, 255, 255, 0.3)" strokeWidth="1" />
-            <line x1="13" y1="13" x2="27" y2="27" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
+            <line x1="13" y1="13" x2="27" y2="27" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" />
             <line x1="27" y1="13" x2="13" y2="27" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
           </svg>
           <img 
